@@ -32,9 +32,8 @@ let e=new Promise(resolve=>{
 })
 
 let x= Promise.any([a,b,c,d, e])
-{
+	window.promises=[a,b,c,d,e];
 	x.then((data)=>{
 		const elem= document.getElementById('output');
 		elem.innerText=data;
 	})
-}
